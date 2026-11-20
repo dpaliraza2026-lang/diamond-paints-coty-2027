@@ -1,0 +1,647 @@
+/* ==========================================================================
+   DIAMOND PAINTS — COLOUR OF THE YEAR 2027 EBOOK
+   "YELLOW ASTER" (DCM CODE: QC0083 | RGB: 254, 236, 123 | HEX: #FEEC7B)
+   Design System: Architectural Modular Grid (Swiss Precision Alignment)
+   Format: Landscape Monograph Spread (Strictly Aligned Dimensions & Baselines)
+   Rules:
+   - Fonts: Manrope (sans body & technical specs) + Didot / Bodoni Moda (editorial headings)
+   - Layout: Co-planar boundaries, matched box heights & widths, zero jagged rags
+   - Corner Radius: strictly 2px
+   - Shadows: none (0 drop shadows, no glow)
+   - Hover effects: none (static editorial publication)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Core COTY Palette — Yellow Aster */
+  --yellow-aster: rgb(254, 236, 123);
+  --yellow-aster-hex: #FEEC7B;
+  --yellow-spirit: var(--yellow-aster);
+  --yellow-spirit-hex: var(--yellow-aster-hex);
+  --yellow-flower: var(--yellow-aster);
+  --yellow-flower-hex: var(--yellow-aster-hex);
+  --yellow-flower-tint: #FCF9E3;
+  --yellow-flower-deep: #D4B82A;
+
+  /* Official Brand Palette */
+  --brand-blue: #015090;
+
+  /* Architectural Neutrals */
+  --ink: #111111;
+  --charcoal: #222222;
+  --slate: #4E4E4E;
+  --neutral-mid: #787878;
+  --border-hairline: #E5E5E0;
+  --border-strong: #111111;
+  --canvas-bg: #F4F3EE;
+  --page-bg: #FFFFFF;
+  --card-bg: #FAFAF7;
+
+  /* Typography */
+  --font-serif: "Didot", "Bodoni MT", "Bodoni Moda", "Playfair Display", Georgia, serif;
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Strict Architectural Modular Tokens */
+  --radius: 2px;
+  --gutter: 24px;
+  --page-padding-x: 52px;
+  --page-padding-y: 36px;
+  --header-height: 38px;
+  --footer-height: 38px;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+html {
+  font-size: 15px;
+  background-color: var(--canvas-bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  min-width: 1408px;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--canvas-bg);
+  padding: 32px 24px 80px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 1408px;
+  width: 100%;
+}
+
+/* Master Architectural Page Frame — Fixed Landscape Monograph Spread (Zero Resizing / Fixed 1360px Viewport) */
+.page {
+  width: 1360px;
+  min-width: 1360px;
+  max-width: 1360px;
+  min-height: 860px;
+  background: var(--page-bg);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius);
+  margin-bottom: 48px;
+  padding: 36px var(--page-padding-x) 28px var(--page-padding-x);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* Header & Footer: Rigid Height and Baseline */
+.page-header {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-hairline);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--neutral-mid);
+  flex-shrink: 0;
+}
+
+.page-header .brand {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.page-footer {
+  height: var(--footer-height);
+  border-top: 1px solid var(--border-hairline);
+  padding-top: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--neutral-mid);
+  flex-shrink: 0;
+}
+
+.page-number {
+  font-weight: 800;
+  color: var(--ink);
+}
+
+/* Page Body: Flexible Architectural Viewport Container */
+.page-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 0;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, .serif-heading {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 3.4rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2.1rem;
+  margin-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--slate);
+  font-weight: 700;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.lead {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 0.84rem;
+  line-height: 1.48;
+  color: var(--slate);
+  margin-bottom: 8px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Strictly Aligned Modular Grid Systems */
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gutter);
+  height: 100%;
+  align-items: stretch;
+}
+
+.grid-1-2-col {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: var(--gutter);
+  height: 100%;
+  align-items: stretch;
+}
+
+.grid-2-1-col {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: var(--gutter);
+  height: 100%;
+  align-items: stretch;
+}
+
+.grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gutter);
+  height: 100%;
+  align-items: stretch;
+}
+
+.grid-4-col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  height: 100%;
+  align-items: stretch;
+}
+
+/* Image Frames with Rigid Proportions */
+figure {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 0;
+}
+
+.img-hero-frame {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-hairline);
+  overflow: hidden;
+  background-color: #EFEFEA;
+  position: relative;
+  min-height: 0;
+}
+
+.img-hero-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius);
+}
+
+/* Architectural Data & Spec Boxes — Aligned Heights & Padding */
+.data-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.data-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border-hairline);
+  font-size: 0.78rem;
+}
+
+.data-metric:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.data-metric .label {
+  color: var(--neutral-mid);
+  font-weight: 500;
+}
+
+.data-metric .val {
+  font-weight: 700;
+  color: var(--ink);
+  font-family: monospace, monospace;
+}
+
+/* Callout Box with Aligned Architectural Left-Axis */
+.architect-callout {
+  border-left: 3px solid var(--ink);
+  background: var(--card-bg);
+  padding: 12px 16px;
+  border-radius: var(--radius);
+}
+
+.architect-callout h4 {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 3px;
+  color: var(--ink);
+}
+
+.architect-callout p {
+  font-size: 0.78rem;
+  margin: 0;
+  color: var(--charcoal);
+  line-height: 1.45;
+}
+
+/* Badges */
+.spec-badge {
+  display: inline-block;
+  width: fit-content;
+  max-width: max-content;
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--canvas-bg);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius);
+  padding: 3px 8px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.spec-badge.yellow {
+  background-color: var(--yellow-flower);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Precise Quote Highlight */
+.quote-highlight {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.42;
+  color: var(--ink);
+  padding: 16px 20px;
+  border-left: 3px solid var(--yellow-flower-deep);
+  background: var(--card-bg);
+  border-radius: var(--radius);
+}
+
+/* 4-Scene Aligned Cards for Page 4 */
+.scene-card-aligned {
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius);
+  background: #FFFFFF;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.scene-card-aligned .scene-img-box {
+  width: 100%;
+  height: 250px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-hairline);
+  overflow: hidden;
+  background-color: #EFEFEA;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+.scene-card-aligned .scene-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.scene-card-aligned .scene-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.scene-card-aligned h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.scene-card-aligned p {
+  font-size: 0.74rem;
+  color: var(--slate);
+  line-height: 1.42;
+  margin-bottom: 8px;
+}
+
+.scene-card-aligned .spec-tag {
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--card-bg);
+  padding: 4px 8px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-hairline);
+  margin-top: auto;
+  text-align: center;
+}
+
+/* Proportional Ratio Bar */
+.ratio-bar {
+  display: flex;
+  width: 100%;
+  height: 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-hairline);
+  overflow: hidden;
+}
+
+.ratio-seg {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  padding: 0 6px;
+}
+
+.ratio-60 { width: 58%; background: #ECECE6; color: var(--charcoal); }
+.ratio-30 { width: 26%; background: #D5D5CC; color: var(--ink); }
+.ratio-10 { width: 16%; background: var(--yellow-flower); color: var(--ink); border-left: 1px solid rgba(0,0,0,0.15); }
+
+/* Compact Specification Table: Aligned Heights */
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.74rem;
+  height: 100%;
+}
+
+.spec-table th, .spec-table td {
+  padding: 7px 10px;
+  text-align: left;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius);
+}
+
+.spec-table th {
+  background-color: var(--canvas-bg);
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.spec-table td {
+  color: var(--charcoal);
+  background-color: #FFFFFF;
+}
+
+.spec-table tr:nth-child(even) td {
+  background-color: #FAFAF7;
+}
+
+/* Palette Containers with Strict Grid Alignment — 6 Swatches (3x2 Filling Box) */
+.palette-aligned-card {
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.palette-swatches-grid-6 {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 12px;
+  margin: 14px 0;
+  min-height: 0;
+}
+
+.palette-swatch-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border-hairline);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #FFFFFF;
+}
+
+.palette-swatch-box {
+  flex: 1;
+  width: 100%;
+  min-height: 140px;
+}
+
+.palette-swatch-info {
+  padding: 6px 8px;
+  background: #FAFAFA;
+  border-top: 1px solid var(--border-hairline);
+  flex-shrink: 0;
+}
+
+.palette-swatch-info .name {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--ink);
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.palette-swatch-info .code {
+  font-size: 0.62rem;
+  color: var(--neutral-mid);
+  font-family: monospace;
+  display: block;
+}
+
+/* Back Cover (Page 9) — Official Brand Blue (Minimalist Full-Bleed Logo) */
+.page-back-cover {
+  background-color: var(--brand-blue) !important;
+  border: 1px solid var(--brand-blue) !important;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+}
+
+.back-cover-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.back-cover-logo-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.back-cover-logo {
+  width: 460px;
+  max-width: 85%;
+  height: auto;
+  display: block;
+}
+
+/* Floating Navigation Controls */
+.doc-controls {
+  position: fixed;
+  bottom: 20px;
+  background: var(--ink);
+  color: #FFFFFF;
+  padding: 10px 24px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  z-index: 999;
+}
+
+.doc-controls span {
+  color: var(--yellow-flower);
+  font-weight: 700;
+}
+
+.doc-controls a {
+  color: #FFFFFF;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 1px;
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    size: landscape;
+    margin: 0;
+  }
+  body {
+    background: transparent;
+    padding: 0;
+  }
+  .doc-controls {
+    display: none !important;
+  }
+  .page {
+    border: none;
+    margin: 0;
+    padding: var(--page-padding-y) var(--page-padding-x);
+    page-break-after: always;
+    height: 100vh;
+    max-height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+  }
+}
