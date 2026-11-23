@@ -24,9 +24,12 @@ This draft publication has been prepared strictly according to the editorial and
    - **Scene 4 (Proportional Discipline):** `assets/render-proportion-balance.jpg` — The 60-30-10 spatial rule in a luxury living space.
    - Complete with the 60-30-10 visual ratio bar and artificial lighting standards (2700K–3000K, CRI > 92).
 5. **Page 5: The Material Conversation**
-   - Hero living room render (`assets/render-material-conversation.jpg`) showing Yellow Aster on a painted wall, juxtaposed with an Artista textured wall in the same space.
-   - Paired with the Artista Terra Tide reference swatch, smoked walnut, travertine stone, and raw linen specifications.
-   - Prominently enforces the HOD rule: *Yellow Aster is not offered as an Artista finish, but complements it in a unified scheme.*
+   - Hero living room render (`assets/render-material-conversation.jpg`) showing Yellow Aster on a smooth plane, paired with tactile Artista textured finishes and architectural timber in the space.
+   - Material Coordination Matrix (2x2 Grid) showcasing 4 curated architectural schemes with no unnecessary body text, displaying the concise triad:
+     - **Texture Shade & Code:** Artista Classique (`Diamond Gold • AE-2207`), Artista Delicoat (`Sand Dune • AD-2102`), Artista Glitz (`Gold Glitz • AT-2307`), Artista Terra Tide (`Stucco Relief • IMP1008`).
+     - **Wall Plane:** Yellow Aster (`QC0083`).
+     - **Wood Coating:** Ace Timberlac.
+   - Spatial specification detailing smooth DCM Flat Matt, Artista textured feature surface, and architectural timber finished in **Ace Timberlac**.
 6. **Page 6: Colour Companions**
    - Three curated palettes (*Biophilic Mineral*, *Modern Monastic*, *Sunlit Heritage*) with a dynamic 3x2 grid of 6 large color swatches per card, shade codes, and material pairings.
 7. **Page 7: From Inspiration to Application**

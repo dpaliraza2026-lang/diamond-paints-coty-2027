@@ -592,6 +592,104 @@ figure {
   display: block;
 }
 
+/* Artista Textured Finishes Grid & Cards (Page 5 Expanded Section) */
+.artista-grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+  height: 100%;
+}
+
+.artista-texture-card {
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius);
+  background: #FFFFFF;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+
+.artista-texture-card .artista-img-box {
+  width: 100%;
+  height: 182px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-hairline);
+  overflow: hidden;
+  background-color: #EFEFEA;
+  margin-bottom: 8px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.artista-texture-card .artista-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.artista-texture-card .artista-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.artista-texture-card h4 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.artista-texture-card .artista-code {
+  font-size: 0.67rem;
+  font-weight: 700;
+  font-family: monospace, monospace;
+  color: var(--charcoal);
+  background: var(--canvas-bg);
+  padding: 2px 6px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-hairline);
+}
+
+.artista-texture-card .triad-spec {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.70rem;
+  line-height: 1.35;
+  color: var(--charcoal);
+  background: #FAFAF7;
+  padding: 6px 8px;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius);
+}
+
+.artista-texture-card .triad-spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artista-texture-card .triad-spec-label {
+  color: var(--slate);
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.artista-texture-card .triad-spec-val {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 0.68rem;
+}
+
 /* Floating Navigation Controls */
 .doc-controls {
   position: fixed;
